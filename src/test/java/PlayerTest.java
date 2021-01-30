@@ -14,20 +14,19 @@ public class PlayerTest {
     public void setUp(){
         deck = new Deck();
         deck.populateDeck();
-        player1 = new Player("Evian", card);
+        player1 = new Player("Pedram");
     }
-
 
 
     @Test
     public void playerHasName(){
-        assertEquals("Evian", player1.getName());
+        assertEquals("Pedram", player1.getName());
     }
 
+
     @Test
-    public void playerHasHand(){
-        player1.addCardToHand(card);
-        assertEquals(card, player1.getHand());
+    public void playerHandStartsEmpty(){
+        assertEquals(0, player1.countCardsInHand());
     }
 
     

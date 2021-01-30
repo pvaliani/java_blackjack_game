@@ -12,7 +12,7 @@ public class Player {
     }
 
 //  Constructor defines a player for the game
-    public Player(String name, Card hand){
+    public Player(String name){
         this.name = name;
         this.hand = new ArrayList<Card>();
     }
@@ -35,6 +35,11 @@ public class Player {
 //  adds a card to the players hand
     public void addCardToHand(Card card) {
         this.hand.add(card);
+    }
+
+//    count cards in players hand
+    public int countCardsInHand(){
+        return this.hand.size();
     }
 
 
