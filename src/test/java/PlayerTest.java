@@ -29,6 +29,13 @@ public class PlayerTest {
         assertEquals(0, player1.countCardsInHand());
     }
 
+
+    @Test
+    public void playerHasHandValue(){
+        player1.addCardToHand(new Card(SuitType.SPADES, RankType.FIVE));
+        assertEquals(5, player1.getValueOfHand());
+    }
+
     
     
 }

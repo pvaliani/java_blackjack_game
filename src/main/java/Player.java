@@ -17,10 +17,6 @@ public class Player {
         this.hand = new ArrayList<Card>();
     }
 
-//   retrieve the hand of the players cards
-    public ArrayList<Card> getHand() {
-        return hand;
-    }
 
 //    getName method gets player name
     public String getName() {
@@ -40,6 +36,14 @@ public class Player {
 //    count cards in players hand
     public int countCardsInHand(){
         return this.hand.size();
+    }
+
+    public int getValueOfHand(){
+        int handValue = 0;
+        for(Card card : this.hand){
+            handValue += card.getValueFromEnum();
+        }
+        return handValue;
     }
 
 
