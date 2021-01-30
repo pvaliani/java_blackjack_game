@@ -22,9 +22,9 @@ public class GameTest {
     }
 
 
-
+// test that the game starts empty
     @Test
-    public void gameHasPlayers(){
-        assertEquals(1,1);
+    public void gameStartsWithNoPlayers(){
+        assertEquals(0, game.getNumberOfPlayers());
     }
 }
