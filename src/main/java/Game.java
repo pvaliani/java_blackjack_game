@@ -7,6 +7,7 @@ public class Game {
     private String winner;
     private Deck deck;
 
+//    Game class constructor defines a game with players and a deck
     public Game(Deck deck){
         this.players = new ArrayList<Player>();
         this.winner = winner;
