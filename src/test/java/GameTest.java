@@ -27,4 +27,14 @@ public class GameTest {
     public void gameStartsWithNoPlayers(){
         assertEquals(0, game.getNumberOfPlayers());
     }
+
+
+//    can add player to a game
+    @Test
+    public void canAddPlayerToGame(){
+
+    }
+
+
+
 }
