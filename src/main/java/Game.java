@@ -29,9 +29,28 @@ public class Game {
 
     }
 
+    public void dealCardToMultiplePlayers(int index) {
+        deck.populateDeck();
+        Card removedCard = deck.removeCardFromDeck();
+        for (Player player : this.players) {
+            if (deck.countCardsInDeck() > getNumberOfPlayers()) {
+                player.addCardToHand(removedCard);
+            }
+        }
+    }
 
-
-
+    public void playGame(){
+        for(Player player : this.players){
+            if(player.getValueOfHand() > winningScore){
+                winningScore = player.getValueOfHand();
+            }
+        }
+    }
 }
+
+
+
+
+
 
 

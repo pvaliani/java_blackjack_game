@@ -11,7 +11,7 @@ public class GameTest {
     private Player player2;
 
     @Before
-    public void setUp(){
+    public void setUp() {
 
         deck = new Deck();
         deck.populateDeck();
@@ -22,19 +22,41 @@ public class GameTest {
     }
 
 
-// test that the game starts empty
+    // test that the game starts empty
     @Test
-    public void gameStartsWithNoPlayers(){
+    public void gameStartsWithNoPlayers() {
         assertEquals(0, game.getNumberOfPlayers());
     }
 
 
-//    can add player to a game
+    //    can add player to a game
     @Test
-    public void canAddPlayerToGame(){
+    public void canAddPlayerToGame() {
+        game.addPlayer(player1);
+        assertEquals(1, game.getNumberOfPlayers());
+    }
+
+    @Test
+    public void canDealACardToEachPlayerInGame() {
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.dealCardToMultiplePlayers(0);
+        assertEquals(1, player1.countCardsInHand());
+        assertEquals(1, player2.countCardsInHand());
 
     }
 
 
+    @Test
+    public void canPlayGame__oneWinner() {
+        player1.addCardToHand(new Card(SuitType.HEARTS, RankType.ACE));
+        player2.addCardToHand(new Card(SuitType.CLUBS, RankType.FIVE));
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.playGame();
+        assertEquals(5, game.getWinningScore());
 
+
+    }
 }
+
