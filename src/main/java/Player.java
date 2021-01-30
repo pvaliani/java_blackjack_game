@@ -1,15 +1,23 @@
+import java.util.ArrayList;
+
 public class Player {
 
+//    Declare a name and hand instance
     private String name;
-    private Card hand;
+    private ArrayList<Card> hand;
 
-
-    public Player(String name, Card hand){
-        this.name = name;
+// Hand is an arrayList of cards for a player
+    public void setHand(ArrayList<Card> hand) {
         this.hand = hand;
     }
 
-    public Card getHand() {
+    public Player(String name, Card hand){
+        this.name = name;
+        this.hand = new ArrayList<Card>();
+    }
+
+//   retrieve the hand of the players cards
+    public ArrayList<Card> getHand() {
         return hand;
     }
 
@@ -23,7 +31,7 @@ public class Player {
     }
 
     public void addCardToHand(Card card) {
-        this.hand = card;
+        this.hand.add(card);
     }
 
 
