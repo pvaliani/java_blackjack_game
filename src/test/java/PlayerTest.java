@@ -7,6 +7,7 @@ public class PlayerTest {
     
     Player player1;
     Player player2;
+    Player player3;
     Deck deck;
     Card card;
     
@@ -15,6 +16,8 @@ public class PlayerTest {
         deck = new Deck();
         deck.populateDeck();
         player1 = new Player("Pedram");
+        player2 = new Player("Owen");
+        player3 = new Player("Chad");
     }
 
 
