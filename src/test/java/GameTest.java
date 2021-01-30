@@ -58,5 +58,19 @@ public class GameTest {
 
 
     }
+
+//    @Test
+//    public void canDeclareWinner__OneWinner(){
+//        player1.addCardToHand(new Card(SuitType.HEARTS, RankType.ACE));
+//        player2.addCardToHand(new Card(SuitType.CLUBS, RankType.FIVE));
+//        game.addPlayer(player1);
+//        game.addPlayer(player2);
+//        game.playGame(0);
+//        assertEquals("Congratulations you won!", game.declareWinner(0));
+//    }
+
+
+
+
 }
 

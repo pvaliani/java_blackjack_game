@@ -4,14 +4,15 @@ public class Game {
 
 
     private ArrayList<Player> players;
-    private String winner;
+    private ArrayList<Player> winners;
+
     private Deck deck;
     private int winningScore;
 
 //    Game class constructor defines a game with players and a deck
     public Game(Deck deck){
         this.players = new ArrayList<Player>();
-        this.winner = winner;
+
         this.deck = deck;
         this.winningScore = 0;
     }
@@ -46,6 +47,23 @@ public class Game {
             }
         }
     }
+
+
+//    public String declareWinner(int index) {
+//        winningValue = playGame();
+//        for (Player player : this.players) {
+//            if (player.getValueOfHand() == winningValue) {
+//                this.winners.add(player);
+//            }
+//            if (this.winners.size() > 1) {
+//                return "Game is a tie!";
+//            } else {
+//                return "Congratulations you won!";
+//            }
+////        }
+//
+//    }
+
 }
 
 
